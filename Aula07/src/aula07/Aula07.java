@@ -16,6 +16,10 @@ public class Aula07 {
         l[5] = new Lutador("Nerdart", "EUA", 30, 1.81f,
                            105.7f, 12, 2, 4);
         
+        Luta UEC01 = new Luta();
+        UEC01.MarcarLuta(l[4], l[5]);
+        UEC01.Lutar();
+        l[4].Status();
         l[5].Status();
     }
 }
