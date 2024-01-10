@@ -22,6 +22,7 @@ public class Aula14ProjetoFinal {
         
         vis[2] = new Visualizacao(g[1],v[0]);
         vis[2].avaliar(10);
+        
         System.out.println(vis[2].toString());
         
         /*System.out.println("VIDEOS\n-------------------------");

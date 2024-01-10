@@ -40,6 +40,8 @@ public class Visualizacao {
         }
     }
     
+    
+    
     public Gafanhoto getEspectador() {
         return espectador;
     }
