@@ -10,13 +10,18 @@ public class Aula14ProjetoFinal {
         g[0] = new Gafanhoto("Jubileu","M",22 , "Juba");
         g[1] = new Gafanhoto("Creuza", "F", 12, "Cruzinha123");
         
-        System.out.println("VIDEOS\n-------------------------");
+        Visualizacao vis = new Visualizacao(g[0], v[2]);
+        System.out.println(vis.toString());
+        
+        /*System.out.println("VIDEOS\n-------------------------");
         System.out.println(v[0].toString());
         System.out.println(v[1].toString());
         System.out.println(v[2].toString());
         
         System.out.println("\nGAFANHOTO\n--------------------");
         System.out.println(g[0].toString());
-        System.out.println(g[1].toString());
+        System.out.println(g[1].toString());*/
+        
+        
     }
 }
