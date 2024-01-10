@@ -31,7 +31,7 @@ public class Gafanhoto extends Pessoa {
     public String toString() {
         return "Gafanhoto{" + super.toString() 
                 + "\n- login= " + login + " | totAssistido= " 
-                + totAssistido + '}';
+                + totAssistido + '}'+ "\n";
     }
     
 }
