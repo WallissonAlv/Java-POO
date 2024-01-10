@@ -1,13 +1,13 @@
 package aula14.projetofinal;
 public class Video implements AcoesVideo{
     
-    private String titulo;
+    private String titulo, avaliacao;
     private boolean reproduzindo;
-    private int avaliacao, views, curtidas;
+    private int views, curtidas;
 
     public Video(String titulo) {
         this.titulo = titulo;
-        this.avaliacao = 1;
+        this.avaliacao = " " ;
         this.views = 0;
         this.curtidas = 0;
         this.reproduzindo = false;
@@ -25,13 +25,11 @@ public class Video implements AcoesVideo{
     public void setReproduzindo(boolean reproduzindo) {
         this.reproduzindo = reproduzindo;
     }
-    public int getAvaliacao() {
+    public String getAvaliacao() {
         return avaliacao;
     }
-    public void setAvaliacao(int avaliacao) {
-        int nova;
-        nova =((this.avaliacao + avaliacao)/this.views);
-        this.avaliacao = nova;
+    public void setAvaliacao(String avaliacao) {
+        this.avaliacao = avaliacao;
     }
     public double getViews() {
         return views;

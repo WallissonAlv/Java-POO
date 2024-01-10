@@ -11,23 +11,33 @@ public class Visualizacao {
     }
     
     public void avaliar(){
-        this.filme.setAvaliacao(5);
+        this.filme.setAvaliacao("Bom");
     }
     public void avaliar(int nota){
-        this.filme.setAvaliacao(nota);
-    }
-    public void avaliar(float porc){
-        int tot = 0;
-        if(porc <= 20){
-            tot = 3;
-        } else if(porc <= 50){
-            tot = 5;
-        } else if(porc <= 90){
-            tot = 8;
-        } else {
-            tot = 10;
+        if(nota <= 3){
+            this.filme.setAvaliacao("Ruim");
+        }else if(nota <= 5){
+            this.filme.setAvaliacao("Regular");
+        }else if(nota <= 7){
+            this.filme.setAvaliacao("Bom");
+        }else if(nota <= 8){
+            this.filme.setAvaliacao("Satisfatorio");
+        }else{
+            this.filme.setAvaliacao("Perfeito");
         }
-        this.filme.setAvaliacao(tot);
+    }
+    public void avaliar(String aval){
+        if(aval.equals("Ruim")){
+            this.filme.setAvaliacao("Ruim");
+        }else if(aval.equals("Regular")){
+            this.filme.setAvaliacao("Regular");
+        }else if(aval.equals("Bom")){
+            this.filme.setAvaliacao("Bom");
+        }else if(aval.equals("Satisfatorio")){
+            this.filme.setAvaliacao("Satisfatorio");
+        }else{
+            this.filme.setAvaliacao("Perfeito");
+        }
     }
     
     public Gafanhoto getEspectador() {

@@ -17,7 +17,7 @@ public class Aula14ProjetoFinal {
         System.out.println(vis[0].toString());
         
         vis[1] = new Visualizacao(g[0],v[1]); // JUBILEU ASSISTE AULA 12
-        vis[1].avaliar(87.0f);
+        vis[1].avaliar("Regular");
         System.out.println(vis[1].toString());
         
         vis[2] = new Visualizacao(g[1],v[0]);
