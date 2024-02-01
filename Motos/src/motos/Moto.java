@@ -2,6 +2,7 @@ package motos;
 public abstract class Moto {
     
     // ATRIBUTOS ===============================================================
+    
     protected float cilindradas;
     protected String tipomotor;
     protected String combustivel;
@@ -14,11 +15,23 @@ public abstract class Moto {
     
     // MÉTODOS PRINCIPAIS ======================================================
     
-    public Moto(){
+    public Moto(float cilindradas, String tipomotor, String combustivel, String
+        transmissao, String partida, float peso, String rodas, float captanque,
+        String farol){
         
+        this.cilindradas = cilindradas;
+        this.tipomotor = tipomotor;
+        this.combustivel = combustivel;
+        this.transmissao = transmissao;
+        this.partida = partida;
+        this.peso = peso;
+        this.rodas = rodas;
+        this.captanque = captanque;
+        this.farol = farol;
     }
     
     // MÉTODOS ESPECIAIS =======================================================
+    
     public float getCilindradas(){
         return cilindradas;
     }
