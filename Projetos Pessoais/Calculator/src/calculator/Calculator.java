@@ -27,6 +27,7 @@ public class Calculator implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
         frame.setLayout(null);
+        frame.setResizable(false);
         
         // PROPRIEDADES CAIXA DE TEXTO -----------------------------------------
         textfield = new JTextField(); 
