@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class Calculator implements ActionListener {
 
+    // ATRIBUTOS ---------------------------------------------------------------
     JFrame frame;
     JTextField textfield;
     JPanel panel;
@@ -20,16 +21,20 @@ public class Calculator implements ActionListener {
     char operator;
     
     Calculator(){
+        
+        // PROPRIEDADES DA JANELA ----------------------------------------------
         frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
         frame.setLayout(null);
         
+        // PROPRIEDADES CAIXA DE TEXTO -----------------------------------------
         textfield = new JTextField(); 
         textfield.setBounds(50, 25, 300, 50);
         textfield.setFont(myFont);
         textfield.setEditable(false);
         
+        // PROPRIEDADES DOS BOTÕES ---------------------------------------------
         addButton = new JButton("+");
         subButton = new JButton("-");
         mulButton = new JButton("*");
@@ -39,7 +44,6 @@ public class Calculator implements ActionListener {
         negButton = new JButton("(-)");
         delButton = new JButton("Del");
         clrButton = new JButton("C");
-        
         
         functionButtons [0] = addButton;
         functionButtons [1] = subButton;
@@ -68,6 +72,7 @@ public class Calculator implements ActionListener {
         delButton.setBounds(150, 430, 100, 50);
         clrButton.setBounds(250, 430, 100, 50);
         
+        // PROPRIEDADES DO PAINEL (LAYOUT DOS BOTÕES) --------------------------
         panel = new JPanel();
         panel.setBounds(50, 100, 300, 300);
         panel.setLayout(new GridLayout(4,4,10,10));
@@ -98,10 +103,10 @@ public class Calculator implements ActionListener {
     }
     
     public static void main(String[] args) {
-
         Calculator calc = new Calculator();
     }
     
+    // SOBREPOSIÇÃO DE AÇÃO PERFORMADA -----------------------------------------
     @Override
     public void actionPerformed(ActionEvent e) {
         for(int i=0;i<10;i++){
