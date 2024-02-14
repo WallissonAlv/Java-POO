@@ -13,6 +13,7 @@ public class ListadeTarefasToDoSimple implements ActionListener {
     JTextField jtextfield;
     JButton addButton, vieButton, ediButton, delButton; 
     JButton[] functionButton = new JButton [4];
+    AddTarefas novaJanelaAddTarefas = new AddTarefas();
     
     Font myFont = new Font("Roboto",Font.BOLD,15);
     Font myFontTitulo = new Font("Roboto",Font.BOLD,25);
@@ -59,7 +60,6 @@ public class ListadeTarefasToDoSimple implements ActionListener {
         panel.setBounds(30, 50, 720, 420);
         panel.setBackground(Color.GRAY);
         
-        
         // ADICIONAR -----------------------------------------------------------
         frame.add(lblTitulo);
         frame.add(panel);
@@ -68,14 +68,19 @@ public class ListadeTarefasToDoSimple implements ActionListener {
         frame.add(ediButton);
         frame.add(delButton);
         frame.setVisible(true);
+        
+        addButton.addActionListener(this);
     }
     
     public static void main(String[] args) {
         // TODO code application logic here
         ListadeTarefasToDoSimple Lista = new ListadeTarefasToDoSimple();
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == addButton){
+            novaJanelaAddTarefas.frame.setVisible(true);
+        }
     }
 }
